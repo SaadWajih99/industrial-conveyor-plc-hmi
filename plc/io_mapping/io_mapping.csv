@@ -1,0 +1,18 @@
+Tag,Address,Type,Description,Normal State,Fault State,PLC Function
+Emergency_Stop_OK,I0.0,DI,NC-style safety circuit healthy,1,0,Global motion permissive
+Start_PB,I0.1,DI,Start pushbutton,0,0,Set automatic run latch
+Stop_PB,I0.2,DI,Stop pushbutton,0,0,Clear run latch
+Reset_PB,I0.3,DI,Reset pushbutton,0,0,Clear latched fault after safe conditions
+Entry_Sensor,I0.4,DI,Product at conveyor entry,0,0,Start product timer and latch sort request
+Position_Sensor,I0.5,DI,Product at diverter position,0,0,Advance state machine
+Exit_Sensor,I0.6,DI,Product at conveyor exit,0,0,Count product and clear product latch
+Motor_Feedback,I0.7,DI,Motor/VFD running feedback,0,0,Startup and motor-failure diagnostic
+Diverter_Home,I1.0,DI,Diverter retracted limit,1,0,Interlock and recovery condition
+Diverter_Extended,I1.1,DI,Diverter extended limit,0,0,Extension timeout diagnostic
+Sort_Request,I1.2,DI,Upstream product class/recipe bit,0,0,Latch product diversion request
+Conveyor_Motor,Q0.0,DO,Motor/VFD run command,0,0,Transport actuator
+Diverter_Extend,Q0.1,DO,Extend diverter valve/driver,0,0,Sorting actuator
+Diverter_Retract,Q0.2,DO,Retract diverter valve/driver,1,0,Safe actuator return
+Green_Run_Lamp,Q0.3,DO,Run indication,0,0,HMI/panel indication
+Red_Fault_Lamp,Q0.4,DO,Fault indication,0,1,HMI/panel indication
+Alarm,Q0.5,DO,Audible/visual alarm command,0,1,Alarm annunciation
