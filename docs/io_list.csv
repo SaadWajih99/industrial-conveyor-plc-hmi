@@ -1,0 +1,18 @@
+Tag,Address,Type,Description,Normal State,Fault State,PLC Function
+Emergency_Stop_OK,I0.0,Digital Input,NC-style safety circuit healthy,TRUE,FALSE,Global motion permissive
+Start_PB,I0.1,Digital Input,Start pushbutton,FALSE,FALSE,Set automatic run latch
+Stop_PB,I0.2,Digital Input,Stop pushbutton,FALSE,FALSE,Clear run latch
+Reset_PB,I0.3,Digital Input,Reset pushbutton,FALSE,FALSE,Clear latched fault after safe conditions
+Entry_Sensor,I0.4,Digital Input,Entry photoelectric sensor,FALSE,FALSE,Start product timer and latch recipe
+Position_Sensor,I0.5,Digital Input,Diverter position sensor,FALSE,FALSE,Advance automatic sequence
+Exit_Sensor,I0.6,Digital Input,Exit photoelectric sensor,FALSE,FALSE,Increment product counter
+Motor_Feedback,I0.7,Digital Input,VFD or contactor running feedback,FALSE,FALSE,Motor failure detection
+Diverter_Home,I1.0,Digital Input,Diverter retract limit,TRUE,FALSE,Interlock and reset condition
+Diverter_Extended,I1.1,Digital Input,Diverter extend limit,FALSE,FALSE,Diverter timeout detection
+Sort_Request,I1.2,Digital Input,Upstream classification/recipe bit,FALSE,FALSE,Product sort latch
+Conveyor_Motor,Q0.0,Digital Output,Conveyor motor/VFD run command,FALSE,FALSE,Run actuator
+Diverter_Extend,Q0.1,Digital Output,Diverter extend command,FALSE,FALSE,Sort actuator
+Diverter_Retract,Q0.2,Digital Output,Diverter retract command,TRUE,FALSE,Safe return command
+Green_Run_Lamp,Q0.3,Digital Output,Run lamp,FALSE,FALSE,Operator indication
+Red_Fault_Lamp,Q0.4,Digital Output,Fault lamp,FALSE,TRUE,Operator indication
+Alarm,Q0.5,Digital Output,Alarm output,FALSE,TRUE,Operator annunciation

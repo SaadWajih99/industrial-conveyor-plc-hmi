@@ -1,0 +1,8 @@
+Fault ID,Trigger condition,PLC response,HMI alarm,Recovery procedure
+F-001,Emergency stop input not healthy,Drop motion outputs and latch E-stop state,Emergency stop active / recovery required,Restore safety circuit and press Reset; restart manually
+F-002,Motor command active without feedback for 0.50 s,Drop motor command and latch fault,Motor command active without feedback,Inspect drive/motor/feedback; clear cause and press Reset
+F-003,Entry sensor active continuously for 2.00 s,Drop outputs and latch fault,Entry sensor stuck ON,Clear obstruction or replace sensor; press Reset
+F-004,Position sensor active without entry detection,Drop outputs and latch fault,Product reached position without entry detection,Inspect entry sensor/wiring and clear product; press Reset
+F-005,Diverter extend commanded without extended feedback for 0.80 s,Drop outputs and latch fault,Diverter extension timeout,Inspect actuator/air/electrical circuit; return home and press Reset
+F-006,Product active for 18.00 s without exit rising edge,Drop outputs and latch fault,Product transport timeout,Inspect jam/sensors/conveyor; clear product and press Reset
+F-007,Diverter home and extended limits both active,Inhibit motion and latch fault,Impossible diverter limit combination,Inspect limit wiring/adjustment; clear contradiction and press Reset
