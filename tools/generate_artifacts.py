@@ -338,7 +338,7 @@ def generate_motor_sizing() -> pd.DataFrame:
 
 
 def generate_notebooks(repo_url: str = "https://github.com/SaadWajih99/industrial-conveyor-plc-hmi") -> None:
-    bootstrap = f"""# Colab bootstrap: install only free packages and load this repository.\n!pip -q install numpy pandas matplotlib scipy\nfrom pathlib import Path\nimport subprocess, sys\nREPO_URL = {repo_url!r}\nPROJECT = Path('industrial-conveyor-plc-hmi')\nif not (PROJECT / 'simulation').exists():\n    if 'REPLACE_WITH_GITHUB_USERNAME' in REPO_URL:\n        raise RuntimeError('Set REPO_URL to the public GitHub repository URL before running this notebook.')\n    subprocess.run(['git', 'clone', REPO_URL, str(PROJECT)], check=True)\nsys.path.insert(0, str(PROJECT.resolve()))\n"""
+    bootstrap = f"""# Colab bootstrap: install only free packages and load this repository.\n!pip -q install numpy pandas matplotlib scipy\nfrom pathlib import Path\nimport subprocess, sys\nREPO_URL = {repo_url!r}\nPROJECT = Path('industrial-conveyor-plc-hmi')\nif not (PROJECT / 'simulation').exists():\n    subprocess.run(['git', 'clone', REPO_URL, str(PROJECT)], check=True)\nsys.path.insert(0, str(PROJECT.resolve()))\n"""
     write_notebook(ROOT / "analysis" / "01_system_simulation.ipynb", [
         ("markdown", "# 01 System Simulation\n\nRun the conveyor digital twin, inspect PLC state, counts, scan period and actual trends."),
         ("code", bootstrap),
