@@ -1,0 +1,11 @@
+Motor permissive / seal-in concept
+
+|----[/E_STOP_ACTIVE]----[/FAULT_LATCHED]----[AUTO_MODE]----[START]----(RUN_LATCH)
+|                         |                 |               |
+|                         |                 |               +----[RUN_LATCH]----|
+|----[/STOP]--------------+-----------------+------------------------------------|
+|----[PERMISSIVE]----[RUN_LATCH]--------------------------------(Q0.0 MOTOR)
+
+The text representation is paired with executable Python in
+`simulation/plc_simulation.py`; it is not presented as a downloadable vendor
+PLC project because no vendor runtime is available in this browser-only build.
