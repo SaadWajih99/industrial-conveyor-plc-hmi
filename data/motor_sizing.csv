@@ -1,0 +1,16 @@
+parameter,value,unit,basis
+conveyor_mass_kg,45.0,kg,design assumption
+product_mass_kg,5.0,kg,design assumption
+belt_speed_mps,0.8,m/s,design assumption
+roller_radius_m,0.05,m,design assumption
+friction_coefficient,0.04,-,design assumption
+acceleration_mps2,0.4,m/s^2,design assumption
+required_acceleration_force_N,20.0,N,calculated
+friction_force_N,19.62,N,calculated
+required_force_N,39.620000000000005,N,calculated
+roller_torque_Nm,1.9810000000000003,N*m,calculated
+motor_side_torque_Nm,2.2011111111111115,N*m,calculated
+mechanical_power_W,35.21777777777778,W,calculated
+roller_speed_rad_s,16.0,rad/s,calculated
+assumed_motor_speed_rpm,1750.0,rpm,design assumption
+approximate_gear_ratio,11.453723216212786,motor:roller,calculated

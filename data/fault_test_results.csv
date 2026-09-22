@@ -1,0 +1,7 @@
+scenario,fault_id,fault_message,alarm_seen,safe_motor_at_end
+F-002 Motor failure,F-002,Motor command active without feedback,True,True
+F-003 Entry stuck ON,F-003,Entry sensor stuck ON,True,True
+F-004 Entry stuck OFF,F-004,Product reached position without entry detection,True,True
+F-005 Diverter timeout,F-005,Diverter extension timeout,True,True
+F-006 Product timeout,F-006,Product transport timeout,True,True
+F-007 Impossible limits,F-007,Impossible diverter limit combination,True,True
