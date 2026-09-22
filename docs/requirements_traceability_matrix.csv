@@ -1,15 +1,15 @@
 Requirement ID,Requirement,Implementation,Test ID,Result
-REQ-001,System shall remove motion commands when E-stop is active,simulation/plc_simulation.py permissive and EMERGENCY_STOP state,TEST-004,EXECUTED
-REQ-002,System shall support automatic product transport,simulation/state_machine.py and simulation/testbench.py,TEST-001,EXECUTED
-REQ-003,System shall support constrained manual mode,simulation/plc_simulation.py HMICommand manual outputs,TEST-003,EXECUTED
-REQ-004,System shall count products on exit rising edge,simulation/plc_simulation.py exit edge counter,TEST-001,EXECUTED
-REQ-005,System shall detect motor feedback loss,PLC timer F-002,TEST-005,EXECUTED
-REQ-006,System shall detect stuck sensors,PLC timers and sequence plausibility F-003/F-004,TEST-006/TEST-007,EXECUTED
-REQ-007,System shall detect diverter timeout,PLC timer F-005,TEST-008,EXECUTED
-REQ-008,System shall detect product transport timeout,PLC timer F-006,TEST-009,EXECUTED
-REQ-009,System shall detect impossible sensor combinations,PLC plausibility F-007,TEST-010,EXECUTED
-REQ-010,System shall latch and reset faults safely,PLC fault latch and reset branch,TEST-011,EXECUTED
-REQ-011,System shall provide HMI status and alarm data,hmi/hmi_simulation.py,TEST-001/TEST-004,EXECUTED
-REQ-012,System shall compare PID tuning methods,control/pid_tuning.py and analysis notebook,TEST-012,EXECUTED
-REQ-013,System shall calculate control metrics,control/performance_metrics.py,TEST-012,EXECUTED
-REQ-014,System shall document I/O and assumptions,docs/io_list.csv and FDS,TEST-001,EXECUTED
+REQ-001,System shall remove motion commands when E-stop is active,simulation/plc_simulation.py permissive and EMERGENCY_STOP state,TEST-004,PASS
+REQ-002,System shall support automatic product transport,simulation/state_machine.py and simulation/testbench.py,TEST-001,PASS
+REQ-003,System shall support constrained manual mode,simulation/plc_simulation.py HMICommand manual outputs,TEST-003,PASS
+REQ-004,System shall count products on exit rising edge,simulation/plc_simulation.py exit edge counter,TEST-001,PASS
+REQ-005,System shall detect motor feedback loss,PLC timer F-002,TEST-005,PASS
+REQ-006,System shall detect stuck sensors,PLC timers and sequence plausibility F-003/F-004,TEST-006/TEST-007,PASS
+REQ-007,System shall detect diverter timeout,PLC timer F-005,TEST-008,PASS
+REQ-008,System shall detect product transport timeout,PLC timer F-006,TEST-009,PASS
+REQ-009,System shall detect impossible sensor combinations,PLC plausibility F-007,TEST-010,PASS
+REQ-010,System shall latch and reset faults safely,PLC fault latch and reset branch,TEST-011,PASS
+REQ-011,System shall provide HMI status and alarm data,hmi/hmi_simulation.py,TEST-001/TEST-004,PASS
+REQ-012,System shall compare PID tuning methods,control/pid_tuning.py and analysis notebook,TEST-012,PASS
+REQ-013,System shall calculate control metrics,control/performance_metrics.py,TEST-012,PASS
+REQ-014,System shall document I/O and assumptions,docs/io_list.csv and FDS,TEST-001,PASS
